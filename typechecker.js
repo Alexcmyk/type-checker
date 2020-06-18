@@ -52,6 +52,6 @@ leadingTag.addEventListener('input', function () {
   leadingOutput.innerHTML = `${this.value}`;
 })
 
-// add italic
+// italic
 
 // color
