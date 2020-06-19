@@ -296,4 +296,17 @@ div.colors div {
 div.colors div.selected {
   border: 2px solid white;
 }
+
+@media (max-width: 600px) {
+  body {
+    margin: 0 0 0 180px;
+  }
+  section.options {
+    padding: 20px;
+    width: 180px;
+  }
+  textarea.output {
+    padding: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
