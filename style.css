@@ -308,5 +308,10 @@ div.colors div.selected {
   textarea.output {
     padding: 20px;
   }
+
+  div.colors div {
+    border-radius: 5px;
+
+  }
 }
 /*# sourceMappingURL=style.css.map */
