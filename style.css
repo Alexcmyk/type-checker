@@ -212,3 +212,13 @@ input[type="text"] {
   color: #fff;
   padding: 5px 7px;
 }
+
+textarea {
+  font-size: 64px;
+  width: 100%;
+  min-height: 100vh;
+  background: none;
+  border: none;
+  color: #fff;
+  outline: none;
+}
