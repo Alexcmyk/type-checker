@@ -11,13 +11,19 @@ const lineHeightOutput = document.querySelector(`span.leading-output`);
 // Italic selectors
 const italicTag = document.querySelector(`input[name="italic"]`);
 
+// Color tags
+const colorTags = document.querySelectorAll("div.colors div");
+
 // Output tags
 const outputTag = document.querySelector("textarea.output");
 const originalText = outputTag.value;
 
 // Type changer tags
-
 const typefaceTag = document.querySelector(`select[name="typeface"]`);
+
+// Font weight tags
+const fontWeightTag = document.querySelector(`input[name="fontweight"]`);
+const fontWeightOutput = document.querySelector(`span.fontweight-output`);
 
 // Sentence and output logic
 sentenceTag.addEventListener("keyup", function () {
@@ -33,13 +39,13 @@ outputTag.addEventListener("keyup", function () {
   sentenceTag.value = this.value;
 });
 
-//  Typesize logic
+// Typesize logic
 typeSizeTag.addEventListener("input", function () {
   outputTag.style.fontSize = `${this.value}px`;
   typeSizeOutput.innerHTML = `${this.value}px`;
 });
 
-// Line height logic
+// Line-height logic
 lineHeightTag.addEventListener("input", function () {
   outputTag.style.lineHeight = this.value;
   lineHeightOutput.innerHTML = this.value;
@@ -54,8 +60,27 @@ italicTag.addEventListener("change", function () {
   }
 });
 
-// Typeface changer
-
+// Typeface logic
 typefaceTag.addEventListener("input", function () {
   outputTag.style.fontFamily = this.value;
+});
+
+// Font-weight logic
+fontWeightTag.addEventListener("input", function () {
+  outputTag.style.fontWeight = this.value;
+  fontWeightOutput.innerHTML = this.value;
+});
+
+// Color logic
+colorTags.forEach((tag) => {
+  tag.addEventListener("click", function () {
+    outputTag.style.backgroundColor = this.style.backgroundColor;
+    outputTag.style.color = this.style.color;
+
+    // Add / remove class list
+    colorTags.forEach((tag) => {
+      tag.classList.remove("selected");
+    });
+    this.classList.add("selected");
+  });
 });

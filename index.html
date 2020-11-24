@@ -24,6 +24,7 @@
           <option value="Montserrat">Montserrat</option>
           <option value="Piazzolla">Piazzolla</option>
           <option value="Prompt">Prompt</option>
+          <option value="Faune">Faune</option>
         </select>
         <img class="arrow" src="./assets/icon-arrow-down.svg" alt="arrow down" />
       </div>
@@ -38,6 +39,14 @@
 
       <div class="option">
         <label
+          >Font Weight
+          <span class="fontweight-output">400</span>
+        </label>
+        <input type="range" name="fontweight" min="100" max="900" value="400" step="100" />
+      </div>
+
+      <div class="option">
+        <label
           >Leading
           <span class="leading-output">1.5</span>
         </label>
@@ -47,6 +56,16 @@
       <div class="option option-checkbox">
         <label>Italic</label>
         <input type="checkbox" name="italic" />
+      </div>
+
+      <div class="option">
+        <label>Colors</label>
+        <div class="colors">
+          <div class="selected" style="background-color: #2a2a2a; color: #fff">a</div>
+          <div style="background-color: #fff; color: #2a2a2a">a</div>
+          <div style="background-color: #63ff03; color: #2a2a2a">a</div>
+          <div style="background-color: #ee0073; color: #fff">a</div>
+        </div>
       </div>
     </section>
 

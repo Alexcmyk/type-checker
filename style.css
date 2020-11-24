@@ -176,12 +176,12 @@ select {
 }
 
 body {
-  font-family: "Faune", Arial, Helvetica, sans-serif;
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: #2a2a2a;
   color: #fff;
-  margin: 40px 40px 40px 320px;
+  margin: 0 0 0 280px;
 }
 
 section.options {
@@ -269,5 +269,68 @@ textarea {
   color: #fff;
   outline: none;
   resize: none;
-  transition: all 0.1s ease-in;
+  padding: 40px;
+  transition: all 0.1s ease;
+}
+
+div.colors {
+  display: flex;
+}
+
+div.colors div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  margin: 5px 10px 0 0;
+  cursor: pointer;
+  transition: border 0.25s ease-in;
+}
+
+div.colors div.selected {
+  border: 2px solid #fff;
+}
+
+/* Checkbox styles 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #575757;
+  outline: none;
+  border-radius: 2px;
+  transition: background-color 0.25s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #fff;
+}
+
+*/
+
+@media (max-width: 600px) {
+  body {
+    margin: 0 0 0 180px;
+  }
+  section.options {
+    padding: 20px;
+    width: 180px;
+  }
+  textarea.output {
+    padding: 20px;
+  }
+
+  div.colors div {
+    border-radius: 5px;
+  }
+
+  input[type="checkbox"] {
+    margin-bottom: 8px;
+  }
 }
