@@ -96,10 +96,18 @@ colorTags.forEach((tag) => {
     outputTag.style.color = this.style.color;
 
     // Add / remove class list
+    // colorTags.forEach((tag) => {
+    //   tag.classList.remove('selected');
+    // });
+    // this.classList.add('selected');
+
+    // If / statement version
     colorTags.forEach((tag) => {
-      tag.classList.remove('selected');
+      if (tag.classList.contains('selected')) {
+        tag.classList.remove('selected');
+        this.classList.add('selected');
+      }
     });
-    this.classList.add('selected');
   });
 });
 
