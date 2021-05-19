@@ -101,7 +101,7 @@ colorTags.forEach((tag) => {
     // });
     // this.classList.add('selected');
 
-    // If / statement version
+    // If statement version
     colorTags.forEach((tag) => {
       if (tag.classList.contains('selected')) {
         tag.classList.remove('selected');
