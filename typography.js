@@ -16,8 +16,11 @@ const letterSpacingOutput = document.querySelector('span.letter-spacing-output')
 const lineHeightTag = document.querySelector(`input[name="lineheight"]`); // Range input
 const lineHeightOutput = document.querySelector(`span.leading-output`); // Span
 
-// Italic selectors
+// Italic selector
 const italicTag = document.querySelector(`input[name="italic"]`); // Checkbox
+
+// Flip selector
+const flipTag = document.querySelector(`input[name="flip"]`); // Checkbox
 
 // Color tags
 const colorTags = document.querySelectorAll('div.colors div'); // Colors div
@@ -74,6 +77,15 @@ italicTag.addEventListener('change', function () {
     outputTag.style.fontStyle = 'italic';
   } else {
     outputTag.style.fontStyle = 'normal';
+  }
+});
+
+// Italic logic
+flipTag.addEventListener('change', function () {
+  if (this.checked) {
+    outputTag.style.transform = 'rotateY(.5turn)';
+  } else {
+    outputTag.style.transform = 'rotateY(0)';
   }
 });
 
